@@ -92,4 +92,19 @@ plt.show()
 
 
 
+fig,ax =plt.subplots(1,1)
+ax.set_xlabel('epoch')
+ax.set_ylabel('Accuracy')
+
+x =  list(range(1,epoch+1))
+
+vy=history.history['val_acc']
+ty=history.history['acc']
+ax.plot(x,vy,'b',label='Validation accuracy')
+ax.plot(x,ty,'r',label='Train accuracy')
+plt.legend()
+plt.grid()
+plt.show()
+
+
 
